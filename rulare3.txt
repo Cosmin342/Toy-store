@@ -1,0 +1,20 @@
+addcurrency GBP £ 1.10
+setstorecurrency GBP
+loadcsv amazon_co-ecommerce_sample.csv
+savestore
+showproduct 3bf8dcb4ebeee466db329bb425c197c0
+addiscount PERCENTAGE 23 "23% Winter Sale"
+listdiscounts
+applydiscount PERCENTAGE 23
+calculatetotal de4912dfd110d19d8c5acc5381e2bd85 19cd58adc8b00b0554b3a5a9fa2079eb 84a973d222db05ce00fa4578e2918f14
+calculatetotal a44bb79d058efc8b9d1214480d126692 87c2e4a5984ea5424220a3ce015f0f2f 4ae5dd2fd1441ba1aefcd8b4fd3111ab
+listcurrencies
+setstorecurrency EUR
+getstorecurrency
+showproduct 3bf8dcb4ebeee466db329bb425c197c0
+applydiscount PERCENTAGE 36
+addcurrency USD $ 0.81
+loadstore
+listproductsbymanufacturarer Studio Anne Carlton
+savecsv store_prices_usd.csv
+exit

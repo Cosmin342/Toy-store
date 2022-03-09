@@ -1,0 +1,30 @@
+addcurrency GBP £ 1.10
+setstorecurrency GBP
+loadcsv amazon_co-ecommerce_sample.csv
+listproductsbymanufacturarer Train Tech
+addcurrency CHF CHf 0.93
+addcurrency CAD $ 0.65
+listcurrencies
+setstorecurrency CHD
+setstorecurrency CAD
+showproduct 9881643091416afe452fa9cf7de78458
+showproduct 694c4bf2c97c9bc18ae4708ceed63616
+calculatetotal 9881643091416afe452fa9cf7de78458 694c4bf2c97c9bc18ae4708ceed63616
+listproductsbymanufacturarer NECA
+savestore
+listcurrencies
+setstorecurrency CHF
+getstorecurrency
+listproductsbymanufacturarer Squishable
+calculatetotal 7b247eff20322c26adeec347ff7bddcb 7a7d4d30186fdd7caadb082988b1a6a1 a4130d999d80313957e11246869891f0 5f2a2131a6ed73019ebe9a94fb98cacc
+addiscount PERCENTAGE 40 "40% Christmas Sale"
+addiscount FIXED 2 "2 Winter Sale"
+listdiscounts
+applydiscount FIXED 2
+applydiscount PERCENTAGE 40
+calculatetotal 7b247eff20322c26adeec347ff7bddcb 7a7d4d30186fdd7caadb082988b1a6a1 a4130d999d80313957e11246869891f0 5f2a2131a6ed73019ebe9a94fb98cacc
+loadstore
+applydiscount FIXED 12
+showproduct a015329569179c7775dcf5ce263330bb
+savecsv store_prices_cad.csv
+exit

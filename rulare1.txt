@@ -1,0 +1,10 @@
+addcurrency GBP £ 1.10
+setstorecurrency GBP
+loadcsv amazon_co-ecommerce_sample.csv
+listproductsbymanufacturarer Bachmann
+addiscount PERCENTAGE 30 "30% Black Friday"
+listdiscounts
+applydiscount PERCENTAGE 30
+calculatetotal eac7efa5dbd3d667f26eb3d3ab504464 e12b92dbb8eaee78b22965d2a9bbbd9f
+savecsv output.csv
+exit

@@ -1,0 +1,15 @@
+addcurrency GBP £ 1.10
+setstorecurrency GBP
+loadcsv amazon_co-ecommerce_sample.csv
+showproduct 81b3ad5c07a31fa67e4dc8643afa3275
+updateparity GBP 1.09
+listcurrencies
+showproduct 81b3ad5c07a31fa67e4dc8643afa3275
+addiscount FIXED 15 "-15 RON Newsletter"
+listdiscounts
+applydiscount FIXED 12
+applydiscount FIXED 15
+calculatetotal 6c4062e5b0da136365915b470ec9d4a4 660b30ec7520119f22681588b9b1e25e a904e69ec08ecbfde95106cc092c4983 590ad6c0f9bdbbac7887ec4e36eb08a0
+listproductsbymanufacturarer Roco
+savecsv new_parity_output.csv
+exit

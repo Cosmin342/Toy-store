@@ -1,0 +1,50 @@
+addcurrency GBP £ 1.10
+setstorecurrency GBP
+loadcsv amazon_co-ecommerce_sample.csv
+getstorecurrency
+addcurrency CAD $ 0.65
+addcurrency RON L 0.21
+listcurrencies
+showproduct 03756123c54f2857ac841e94b9679189
+showproduct 589439323857e0142a8239f966d40a62
+setstorecurrency RON
+getstorecurrency
+showproduct 03756123c54f2857ac841e94b9679189
+showproduct 589439323857e0142a8239f966d40a62
+calculatetotal 03756123c54f2857ac841e94b9679189 589439323857e0142a8239f966d40a62
+updateparity RON 0.29
+listcurrencies
+showproduct 03756123c54f2857ac841e94b9679189
+calculatetotal 35f493e139cf4d959ac97ad6325ab376 5cc7c1d1de6ea639a357bd967a9b51c6 241671dcac1d9bd231afd8f9351f894d
+savestore
+setstorecurrency CBD
+setstorecurrency CAD
+getstorecurrency
+listproducts
+listproductsbymanufacturarer GRAHAM'S GAMES
+listdiscounts
+addiscount PERCENTAGE 50 "50% Christmas Sale"
+addiscount PERCENTAGE 20 "20% Black Friday"
+listdiscounts
+applydiscount PERCENTAGE 20
+calculatetotal d4c236bb153de1dd4286ac31337896ab 387d4aecf0186d02a8955e28b3ea7d78 67ff52712dae78a8261577042c07346a
+showproduct 8002a9451ae43b470c53f2889347406b
+listproductsbymanufacturarer Hornby
+listcurrencies
+setstorecurrency EUR
+listproductsbymanufacturarer HPI Racing
+showproduct 7bc15b324084743b665ee3d698960ff7
+showproduct 5cfb174ca9e0a60c1fc79a902eb6c799
+applydiscount PERCENTAGE 50
+calculatetotal 7bc15b324084743b665ee3d698960ff7 5cfb174ca9e0a60c1fc79a902eb6c799
+calculatetotal b206d56bdb6dcdda41c71500b316e56a caa8b81334b935ff9e6f11b5d839eec5 f6d56c2504544875a21a7509b3905cf0
+listmanufacturers
+listproductsbymanufacturarer 24 Game
+loadstore
+getstorecurrency
+showproduct 7b758d22f1116336307a466fae13a673
+showproduct 31ecad794c9eb5248fa6d8fc3fc5cc61
+applydiscount FIXED 24
+calculatetotal a516d2efab0379b34a3ef95e6287c9a6 40073563dd7742ff1c290001b9bd3f8f
+savecsv store_prices_ron.csv
+exit
