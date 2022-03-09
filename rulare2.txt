@@ -10,6 +10,6 @@ listdiscounts
 applydiscount FIXED 12
 applydiscount FIXED 15
 calculatetotal 6c4062e5b0da136365915b470ec9d4a4 660b30ec7520119f22681588b9b1e25e a904e69ec08ecbfde95106cc092c4983 590ad6c0f9bdbbac7887ec4e36eb08a0
-listproductsbymanufacturarer Roco
+listproductsbymanufacturer Roco
 savecsv new_parity_output.csv
 exit

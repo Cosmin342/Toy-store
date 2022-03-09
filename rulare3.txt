@@ -15,6 +15,6 @@ showproduct 3bf8dcb4ebeee466db329bb425c197c0
 applydiscount PERCENTAGE 36
 addcurrency USD $ 0.81
 loadstore
-listproductsbymanufacturarer Studio Anne Carlton
+listproductsbymanufacturer Studio Anne Carlton
 savecsv store_prices_usd.csv
 exit

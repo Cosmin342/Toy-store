@@ -1,7 +1,7 @@
 addcurrency GBP £ 1.10
 setstorecurrency GBP
 loadcsv amazon_co-ecommerce_sample.csv
-listproductsbymanufacturarer Bachmann
+listproductsbymanufacturer Bachmann
 addiscount PERCENTAGE 30 "30% Black Friday"
 listdiscounts
 applydiscount PERCENTAGE 30

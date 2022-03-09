@@ -21,7 +21,7 @@ setstorecurrency CBD
 setstorecurrency CAD
 getstorecurrency
 listproducts
-listproductsbymanufacturarer GRAHAM'S GAMES
+listproductsbymanufacturer GRAHAM'S GAMES
 listdiscounts
 addiscount PERCENTAGE 50 "50% Christmas Sale"
 addiscount PERCENTAGE 20 "20% Black Friday"
@@ -29,17 +29,17 @@ listdiscounts
 applydiscount PERCENTAGE 20
 calculatetotal d4c236bb153de1dd4286ac31337896ab 387d4aecf0186d02a8955e28b3ea7d78 67ff52712dae78a8261577042c07346a
 showproduct 8002a9451ae43b470c53f2889347406b
-listproductsbymanufacturarer Hornby
+listproductsbymanufacturer Hornby
 listcurrencies
 setstorecurrency EUR
-listproductsbymanufacturarer HPI Racing
+listproductsbymanufacturer HPI Racing
 showproduct 7bc15b324084743b665ee3d698960ff7
 showproduct 5cfb174ca9e0a60c1fc79a902eb6c799
 applydiscount PERCENTAGE 50
 calculatetotal 7bc15b324084743b665ee3d698960ff7 5cfb174ca9e0a60c1fc79a902eb6c799
 calculatetotal b206d56bdb6dcdda41c71500b316e56a caa8b81334b935ff9e6f11b5d839eec5 f6d56c2504544875a21a7509b3905cf0
 listmanufacturers
-listproductsbymanufacturarer 24 Game
+listproductsbymanufacturer 24 Game
 loadstore
 getstorecurrency
 showproduct 7b758d22f1116336307a466fae13a673

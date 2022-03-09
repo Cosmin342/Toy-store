@@ -1,0 +1,71 @@
+Radu Cosmin
+323 CB
+
+Tema 2 POO - ToyStore
+
+Pentru rularea jar-ului se va folosi comanda:
+java -cp Tema2.jar Main < rulareI.txt > rulareI_out.txt,
+unde I este numarul testului. Am lucrat pe csv-ul initial (pe care l-am
+inclus in arhiva).
+
+Pe langa clase, jar, teste si README, am inclus in arhiva si fisierele de
+referinta.
+
+In implementare temei am tinut cont de Single Responsability Principle,
+impartind astfel metodele din Main in mai multe clase separate in functie
+de ce prelucreaza acestea. Spre exemplu, in clasa ComandProcessor am metode
+care prelucreaza comenzile primite la intrare, iar in clasa Printer am comenzi
+care afiseaza detalii despre produse.
+
+Pentru implementarea consolei am o metoda ce intoarce un numar pe baza numelui
+comenzii. Apoi, folosind un switch pe baza numarului, se apeleaza o anumita
+comanda ce prelucreaza datele din magazin. La inceput, initializez magazinul cu
+moneda default euro.
+
+La citirea (sau scrierea) dintr-un fisier CSV am folosit clasele CSVReader
+si CSVPrinter din biblioteca Apache Commons, CSVReader permitand citirea cate
+unei coloane dintr-o linie. Pe langa bonus-ul cu citirea folosind clase deja
+implementate, am mai realizat citirea si scrierea datelor despre magazin din/in
+fisier binar. Pentru aceasta am folosit clasele FileInputStream,
+FileOutputStream, ObjectInputStream si ObjectOutputStream, ultimele doua
+fiind folosite la citirea/scrierea unui obiect. Astfel, clasele Product,
+Manufacturer, Currency si Discount implementeaza Serializable pentru a putea
+fi scrise sau citite cu ajutorul claselor anterioare.
+
+La constructia unui produs am implementat design pattern-ul builder scriind o
+clasa separata, ProductBuilder, care apeleaza setterii din Product si mai
+contine metoda build ce returneaza produsul cu adributele setate anterior.
+
+Pentru implementarea design pattern-ului Singleton la clasa Store, am definit
+in Store o variabila membru statica ce retine instanta unica a magazinului, cat
+si o metoda ce returneaza instanta.
+
+Am implementat comenzile pentru consola, cu anumite particularitati. In cazul
+updateparity, am mai verificat si daca valuta cautata pentru schimbarea
+paritatii la euro este si cea setata pe magazin. In caz afirmativ, recalculez
+preturile prin inmultirea cu noua paritate si impartirea la vechea paritate.
+
+La adddiscount, am setat si timpul la care a fost aplicat discount-ul,
+actualizand-ul in momentul in care aplicam discount-ul la toate produsele.
+La applydiscount, daca deja exista un discount pe produse, il suprascriam.
+Daca in momentul aplicarii, un discount nu se poate aplica la un produs,
+setam campul discount la toate produsele la null si aruncam o exceptie.
+Pentru functia calculatetotal adun preturile produselor date cu parametru,
+micsorand-ule daca acestea au discount-uri aplicate.
+
+In momentul in care salvam produsele in fisierul csv sau in care afisam unul
+sau mai multe produse, daca acestea aveau discount, scriam pretul obtinut in
+urma aplicarii discount-ului.
+
+Pentru constructia listei de producatori reparcurg lista de produse dupa
+citirea din fisier si adaug producatorul produsului curent in lista magazinului.
+Daca acesta exista deja, actualizez campul countProducts al manufacturer-ului
+din lista si arunc o exceptie.
+
+Clasele au aproximativ aceeleasi campuri ca in enunt, doar ca la store am scos
+name deoarece nu l-am utilizat si am adaugat currencies ce retine lista cu
+monedele disponibile in store si discounts ce retine lista de discount-uri.
+In plus, in loc de vectori am utilizat in principal arraylist-uri.
+
+In cazul comenzilor am corectat si numele uneia, mai exact, in loc de
+"listproductsbymanufacturarer" am scris "listproductsbymanufacturer".
